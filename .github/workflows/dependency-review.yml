@@ -7,12 +7,11 @@
 #
 # Source repository: https://github.com/actions/dependency-review-action
 # Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
+
 name: 'Dependency review'
 on:
-  workflow_dispatch:
-  push:
-    branches:
-      - develop
+  pull_request:
+    branches: [ "develop" ]
 
 # If using a dependency submission action in this workflow this permission will need to be set to:
 #
